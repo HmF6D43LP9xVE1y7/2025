@@ -787,7 +787,7 @@ a:hover, svg:hover, .redirect:hover {
     height: calc(calc(100vw / var(--gridWidth)) * 1.5) !important;
 }
 
-/* DEBUG */ /*
+/* DEBUG */
 
 .debugCenter {
     height: 1px;
