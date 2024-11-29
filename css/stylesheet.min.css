@@ -488,7 +488,7 @@ a:hover, svg:hover, .redirect:hover {
     }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        grid-template-rows: repeat(65, calc(100vw / var(--gridWidth)));
+        grid-template-rows: repeat(165, calc(100vw / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
@@ -787,7 +787,7 @@ a:hover, svg:hover, .redirect:hover {
     height: calc(calc(100vw / var(--gridWidth)) * 1.5) !important;
 }
 
-/* DEBUG */
+/* DEBUG *//*
 
 .debugCenter {
     height: 1px;
