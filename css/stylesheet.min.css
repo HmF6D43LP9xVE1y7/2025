@@ -694,12 +694,12 @@ a:hover, svg:hover, .redirect:hover {
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
     .parallaxWartenbergstrasseA {
-        top: calc(calc(100vw / var(--gridWidth)) * 26);
-        left: calc(calc(100vw / var(--gridWidth)) * 6);
+        top: calc(calc(100vw / var(--gridWidth)) * 32);
+        left: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     .parallaxWartenbergstrasseB {
-        top: calc(calc(100vw / var(--gridWidth)) * 29);
-        left: calc(calc(100vw / var(--gridWidth)) * 8);
+        top: calc(calc(100vw / var(--gridWidth)) * 35);
+        left: calc(calc(100vw / var(--gridWidth)) * 4);
     }
     .parallaxBuechehofA {
         top: calc(calc(100vw / var(--gridWidth)) * 66);
@@ -744,12 +744,12 @@ a:hover, svg:hover, .redirect:hover {
     }
     .parallaxWartenbergstrasseA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 36);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
     .parallaxWartenbergstrasseB {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 29);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 39);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 8);
     }
     .parallaxBuechehofA {
