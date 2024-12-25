@@ -330,7 +330,7 @@ a:hover, svg:hover, .redirect:hover {
     }
     svg {
         width: calc(calc(100vw / var(--gridWidth)) * 2);
-        stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
+        stroke-width: calc(calc(100vw / var(--gridWidth)) * .01); /* same as desktop */
     }
     #svgMail {
         right: calc(calc(100vw / var(--gridWidth)) * 6);
@@ -339,17 +339,17 @@ a:hover, svg:hover, .redirect:hover {
         right: calc(calc(100vw / var(--gridWidth)) * 3);
     }
     #svgSocial {
-        right: calc(calc(100vw / var(--gridWidth)) * 0);
+        right: calc(calc(100vw / var(--gridWidth)) * 0); /* same as desktop */
     }
     .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
         height: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     .navTL, .navTR {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
     }
     .navTL {
         top: calc(calc(100vw / var(--gridWidth)) * 2);
@@ -372,14 +372,14 @@ a:hover, svg:hover, .redirect:hover {
     .navBR {
         bottom: calc(calc(100vw / var(--gridWidth)) * 2);
         right: calc(calc(100vw / var(--gridWidth)) * 2);
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
+        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
     }
     .navTR, .toggle {
-        display: block;
+        display: block; /* same as desktop */
     }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
@@ -390,16 +390,16 @@ a:hover, svg:hover, .redirect:hover {
     }
     .containerSection {
         width: calc(calc(100vw / var(--gridWidth)) * 27);
-        position: relative;
+        position: relative; /* same as desktop */
     }
     .fontM, .parallaxfontL {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 2);
+        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8); /* same as desktop */
+        line-height: calc(calc(100vw / var(--gridWidth)) * 2); /* same as desktop */
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
     }
     .fontS, .parallaxfontM {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1);
+        font-size: calc(calc(100vw / var(--gridWidth)) * .9); /* same as desktop */
+        line-height: calc(calc(100vw / var(--gridWidth)) * 1); /* same as desktop */
         margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     .lightbox img {
@@ -678,29 +678,29 @@ a:hover, svg:hover, .redirect:hover {
     }
 }
 
-/* DESKTOP FONT POSITION */
+/* DESKTOP / TABLET FONT POSITION */
 
 @media only screen and (min-width: 768px) {
     .parallaxOubliettesA {
-        top: calc(calc(100vw / var(--gridWidth)) * 75);
+        top: calc(calc(100vw / var(--gridWidth)) * 105);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
     }
     .parallaxOubliettesB {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * 78);
+        top: calc(calc(100vw / var(--gridWidth)) * 108);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
     .parallaxOubliettesC {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * 85);
+        top: calc(calc(100vw / var(--gridWidth)) * 115);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
     .parallaxWartenbergstrasseA {
-        top: calc(calc(100vw / var(--gridWidth)) * 32);
+        top: calc(calc(100vw / var(--gridWidth)) * 28);
         left: calc(calc(100vw / var(--gridWidth)) * 2);
     }
     .parallaxWartenbergstrasseB {
-        top: calc(calc(100vw / var(--gridWidth)) * 35);
+        top: calc(calc(100vw / var(--gridWidth)) * 30);
         left: calc(calc(100vw / var(--gridWidth)) * 4);
     }
     .parallaxBuechehofA {
@@ -729,29 +729,29 @@ a:hover, svg:hover, .redirect:hover {
     }
     .parallaxOubliettesA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 40);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 105);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 31);
     }
     .parallaxOubliettesB {
         margin: 0 var(--margin) 0 var(--margin);
         width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 43);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 108);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
     }
     .parallaxOubliettesC {
         margin: 0 var(--margin) 0 var(--margin);
         width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 50);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 115);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
     }
     .parallaxWartenbergstrasseA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 36);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 28);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
     .parallaxWartenbergstrasseB {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 39);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 30);
         left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 8);
     }
     .parallaxBuechehofA {
