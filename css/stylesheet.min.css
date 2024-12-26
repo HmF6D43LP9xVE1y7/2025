@@ -795,14 +795,13 @@ a:hover, svg:hover, .redirect:hover {
     height: calc(calc(100vw / var(--gridWidth)) * 1.5) !important;
 }
 
-/* DEBUG *//*
+/* DEBUG */
 
 * {
     background-color: rgba(255, 0, 0, .2);
     outline: 1px dashed black !important;
 }
-
 body {
-    background: linear-gradient(-90deg, rgba(0,0,0,.1) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), white;
-    background-size: calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 1);
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), white;
+    background-size: calc(calc(100vw / var(--gridWidth)) * 15) calc(calc(100vw / var(--gridWidth)) * 1);
 }
