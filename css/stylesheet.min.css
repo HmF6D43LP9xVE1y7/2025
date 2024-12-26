@@ -490,10 +490,10 @@ a:hover, svg:hover, .redirect:hover {
     }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        grid-template-rows: repeat(130, calc(100vw / var(--gridWidth)));
+        grid-template-rows: repeat(132, calc(100vw / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
-        margin: calc(calc(100vw / var(--gridWidth)) * 2.6) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 2.45) calc(calc(100vw / var(--gridWidth)) * 1);
+        margin: calc(calc(100vw / var(--gridWidth)) * .8) calc(calc(100vw / var(--gridWidth)) * 15) calc(calc(100vw / var(--gridWidth)) * 0) calc(calc(100vw / var(--gridWidth)) * 1);
     }
     .containerSection {
         width: calc(calc(100vw / var(--gridWidth)) * 13.5);
@@ -605,7 +605,7 @@ a:hover, svg:hover, .redirect:hover {
     .gridContainer {
         margin: 0 var(--margin) 0 var(--margin);
         grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
-        grid-template-rows: repeat(130, calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(132, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
         margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
@@ -704,12 +704,12 @@ a:hover, svg:hover, .redirect:hover {
         left: calc(calc(100vw / var(--gridWidth)) * 4);
     }
     .parallaxBuechehofA {
-        top: calc(calc(100vw / var(--gridWidth)) * 66);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc(calc(100vw / var(--gridWidth)) * 126);
+        left: calc(calc(100vw / var(--gridWidth)) * 3);
     }
     .parallaxBuechehofB {
-        top: calc(calc(100vw / var(--gridWidth)) * 69);
-        left: calc(calc(100vw / var(--gridWidth)) * 3);
+        top: calc(calc(100vw / var(--gridWidth)) * 129);
+        left: calc(calc(100vw / var(--gridWidth)) * 5);
     }
     .parallaxHirzbodenwegA {
         top: calc(calc(100vw / var(--gridWidth)) * 76);
@@ -802,3 +802,7 @@ a:hover, svg:hover, .redirect:hover {
     outline: 1px dashed black !important;
 }
 
+body {
+    background: linear-gradient(-90deg, rgba(0,0,0,.1) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), white;
+    background-size: calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 1);
+}
