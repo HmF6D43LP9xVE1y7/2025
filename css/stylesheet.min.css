@@ -488,10 +488,42 @@ a:hover, svg:hover, .redirect:hover {
     .navTR, .toggle {
         display: block;
     }
-    .gridContainer {
-        grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        grid-template-rows: repeat(132, calc(100vw / var(--gridWidth)));
-    }
+
+
+
+
+
+
+
+
+
+                        .gridContainer {
+                            grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
+                        }
+                        .gridContainer + .gridContainer {
+                            margin-top: calc(calc(100vw / var(--gridWidth)) * 14);
+                        }
+                        .buechehof {
+                            grid-template-rows: repeat(126, calc(100vw / var(--gridWidth)));
+                            margin-top: calc(calc(100vw / var(--gridWidth)) * 3);
+                        }
+                        .wartenbergstrasse {
+                            grid-template-rows: repeat(58, calc(100vw / var(--gridWidth)));
+                        }
+                        .oubliettes {
+                            grid-template-rows: repeat(56, calc(100vw / var(--gridWidth)));
+                            margin-bottom: calc(calc(100vw / var(--gridWidth)) * 3);
+                        }
+
+
+
+
+
+
+
+
+
+
     .containerInfo, .containerImpressum {
         margin: calc(calc(100vw / var(--gridWidth)) * .8) calc(calc(100vw / var(--gridWidth)) * 15) calc(calc(100vw / var(--gridWidth)) * 0) calc(calc(100vw / var(--gridWidth)) * 1);
     }
@@ -682,12 +714,12 @@ a:hover, svg:hover, .redirect:hover {
 
 @media only screen and (min-width: 768px) {
     .parallaxOubliettesA {
-        top: calc(calc(100vw / var(--gridWidth)) * 105);
+        top: calc(calc(100vw / var(--gridWidth)) * -5);
         left: calc(calc(100vw / var(--gridWidth)) * 31);
     }
     .parallaxOubliettesB {
         width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * 108);
+        top: calc(calc(100vw / var(--gridWidth)) * -2);
         left: calc(calc(100vw / var(--gridWidth)) * 17);
     }
     .parallaxOubliettesC {
