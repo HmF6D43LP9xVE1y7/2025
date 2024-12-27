@@ -200,18 +200,6 @@ a:hover, svg:hover, .redirect:hover {
     :root {
         --gridWidth: 16;
     }
-    /*
-    .underline {
-        text-decoration-thickness: calc(calc(100vw / var(--gridWidth)) * .08);
-        text-decoration-color: black;
-        text-decoration: underline;
-        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-    }
-    */
     svg {
         width: calc(calc(100vw / var(--gridWidth)) * 1.5);
         stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
@@ -295,15 +283,7 @@ a:hover, svg:hover, .redirect:hover {
 /* EXCEPT MOBILE */
 
 @media only screen and (min-width: 768px) {
-    /*
-    .imgContainer {
-        background-color: transparent;
-        background-blend-mode: multiply;
-    }
-    .imgContainer:hover {
-        background-color: grey;
-    }
-    */
+    /* add same as desktop ??? */
 }
 
 /* TABLET */
@@ -312,18 +292,6 @@ a:hover, svg:hover, .redirect:hover {
     :root {
         --gridWidth: 44;
     }
-    /*
-    .underline {
-        text-decoration-thickness: calc(calc(100vw / var(--gridWidth)) * .08);
-        text-decoration-color: black;
-        text-decoration: underline;
-        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .08);
-    }
-    */
     .alignRight {
         top: calc(calc(100vw / var(--gridWidth)) * 5.6);
         right: calc(calc(100vw / var(--gridWidth)) * 2);
@@ -414,18 +382,6 @@ a:hover, svg:hover, .redirect:hover {
     :root {
         --gridWidth: 44;
     }
-    /*
-    .underline {
-        text-decoration-thickness: calc(calc(100vw / var(--gridWidth)) * .04);
-        text-decoration-color: black;
-        text-decoration: underline;
-        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
-        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
-        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
-        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
-        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .04);
-    }
-    */
     .alignRight {
         top: calc(calc(100vw / var(--gridWidth)) * 2.6);
         right: calc(calc(100vw / var(--gridWidth)) * 1);
@@ -560,18 +516,6 @@ a:hover, svg:hover, .redirect:hover {
         --viewWidth: 50vw;
         --margin: 25vw;
     }
-    /*
-    .underline {
-        text-decoration-thickness: calc(calc(100vw / var(--gridWidth)) * .02);
-        text-decoration-color: black;
-        text-decoration: underline;
-        -webkit-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .02);
-        -moz-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .02);
-        -ms-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .02);
-        -o-text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .02);
-        text-decoration: underline black calc(calc(100vw / var(--gridWidth)) * .02);
-    }
-    */
     .alignRight {
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6);
         right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
