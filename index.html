@@ -43,12 +43,17 @@
 		</script>
 	</head>
 	<body oncontextmenu="return false">
+
+
+		<svg id="fader"></svg>
+
+
 		<div class="navTR fontM">
 			tim ott
 		</div>
-		<div class="navBL fontM redirect" redirect="info">
+		<a class="navBL fontM" href="info/">
 			info
-		</div>
+		</a>
 		<div class="lightbox">
 			<svg class="lightboxClose navTR" viewBox="-1 -1 18 17.5">
 				<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
@@ -165,5 +170,6 @@
 		</script>
 		<script src="js/fader.min.js">
 		</script>
+		<script>fadeInPage()</script>
 	</body>
 </html>

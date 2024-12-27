@@ -33,11 +33,11 @@
     margin: 0;
     border: 0;
     border-spacing: 0;
-    -webkit-transition: opacity .5s ease, background-color .5s ease;
-    -moz-transition: opacity .5s ease, background-color .5s ease;
-    -ms-transition: opacity .5s ease, background-color .5s ease;
-    -o-transition: opacity .5s ease, background-color .5s ease;
-    transition: opacity .5s ease, background-color .5s ease;
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
     -ms-overflow-style: none;
     scrollbar-width: none;
     -webkit-user-select: none;
@@ -93,10 +93,10 @@ svg {
 #svgSocial {
     right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 0);
 }
-a, svg, .redirect {
+a, svg {
     pointer-events: all;
 }
-a:hover, svg:hover, .redirect:hover {
+a:hover, svg:hover {
     opacity: .3 !important;
     cursor: pointer;
 }
@@ -505,25 +505,12 @@ a:hover, svg:hover, .redirect:hover {
 
 
 
-
-
-
-
-
-
-
-    .gridContainer {
-        margin: 0 var(--margin) 0 var(--margin);
-        grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
-        grid-template-rows: repeat(132, calc(var(--viewWidth) / var(--gridWidth)));
-    }
-
-
-
-
-
-
-
+                        .gridContainer {
+                            margin: 0 var(--margin) 0 var(--margin);
+                            grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
+                            grid-template-rows: repeat(132, calc(var(--viewWidth) / var(--gridWidth)));
+                        }
+    
 
 
 
@@ -531,43 +518,6 @@ a:hover, svg:hover, .redirect:hover {
         margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* MOBILE FONT POSITION */
 
@@ -729,7 +679,50 @@ a:hover, svg:hover, .redirect:hover {
     height: calc(calc(100vw / var(--gridWidth)) * 1.5) !important;
 }
 
-/* DEBUG */
+
+
+
+#fader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    pointer-events: none;
+    background-color: white;
+    animation-duration: .5s;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    top: 0;
+    left: 0;
+    border-spacing: 0;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fade-out {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+@keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+
+
+/* DEBUG *//*
 
 * {
     background-color: rgba(255, 0, 0, .2);
