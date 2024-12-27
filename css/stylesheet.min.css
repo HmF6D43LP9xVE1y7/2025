@@ -77,12 +77,9 @@ body {
     -o-text-decoration: underline;
     text-decoration: underline;
 }
-.indent {
-    text-indent: calc(calc(100vw / var(--gridWidth)) * 2);
-}
-/* indent, p amount = after which block of targeted p block to apply style to */
+/* indent, p amount = after which block of targeted p block to apply style to, 2x p = after first block, 2x = after second */
 p + p {
-    text-indent: calc(calc(100vw / var(--gridWidth)) * 2);
+    text-indent: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
 }
 .alignRight {
     position: fixed;
@@ -91,6 +88,10 @@ p + p {
 svg {
     position: absolute;
     stroke: black;
+    stroke-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * .01);
+}
+#svgSocial {
+    right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 0);
 }
 a, svg, .redirect {
     pointer-events: all;
@@ -98,6 +99,9 @@ a, svg, .redirect {
 a:hover, svg:hover, .redirect:hover {
     opacity: .3 !important;
     cursor: pointer;
+}
+.navTR, .toggle {
+    display: block;
 }
 .navTR, .navBR {
     text-align: right;
@@ -117,9 +121,6 @@ a:hover, svg:hover, .redirect:hover {
 }
 .gridContainer {
     display: grid;
-}
-.containerSection {
-    position: absolute;
 }
 .parallaxContainer {
     position: relative;
@@ -194,85 +195,81 @@ a:hover, svg:hover, .redirect:hover {
     margin: 0 !important;
 }
 
-/* MOBILE */
+/* - - - - - - - - - - - - - - - - - - - - MOBILE - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (max-width: 767px) {
     :root {
         --gridWidth: 16;
+        --viewWidth: 100vw;
+        --margin: 0vw;
     }
     svg {
-        width: calc(calc(100vw / var(--gridWidth)) * 1.5);
-        stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     #svgMail {
-        right: calc(calc(100vw / var(--gridWidth)) * 4.5);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 4.5);
     }
     #svgTel {
-        right: calc(calc(100vw / var(--gridWidth)) * 2.25);
-    }
-    #svgSocial {
-        right: calc(calc(100vw / var(--gridWidth)) * 0);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.25);
     }
     .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(100vw / var(--gridWidth)) * 1.5);
+        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     .navTL, .navTR {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.225));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.225));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.225));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.225));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.225));
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
     }
     .navTL {
-        top: calc(calc(100vw / var(--gridWidth)) * 1);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navBL {
-        bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
     }
     .navBR {
-        bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .065));
-    }
-    .navTR, .toggle {
-        display: block;
+        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
     }
     .navTR, .navCL, .navCR, .navBC, .toggle {
         display: none;
     }
     .gridContainer {
-        grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        grid-template-rows: repeat(70, calc(100vw / var(--gridWidth)));
+        grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(70, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
-        margin: calc(calc(100vw / var(--gridWidth)) * 3) calc(calc(100vw / var(--gridWidth)) * 1) calc(calc(100vw / var(--gridWidth)) * 3) calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .containerSection {
-        width: calc(calc(100vw / var(--gridWidth)) * 14);
-        position: relative;
+        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) calc(calc(var(--viewWidth) / var(--gridWidth)) * 3) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
     }
     [class^="gridItem"] {
         pointer-events: none;
     }
     .fontM, .parallaxfontL {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.35);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1.5);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.35);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .fontS, .parallaxfontM {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .675);
-        line-height: calc(calc(100vw / var(--gridWidth)) * .75);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .675);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * .75);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .lightbox img {
-        max-width: calc(calc(100vw / var(--gridWidth)) * 14);
-        max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 6);
+        max-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 14);
+        max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
     .imgContainer {
         pointer-events: none;
@@ -280,261 +277,11 @@ a:hover, svg:hover, .redirect:hover {
     }
 }
 
-/* EXCEPT MOBILE */
+/* - - - - - - - - - - - - - - - - - - - - TABLET, DESKTOP, ULTRAWIDE - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (min-width: 768px) {
-    /* add same as desktop ??? */
-}
-
-/* TABLET */
-
-@media only screen and (min-width: 768px) and (max-width: 1160px) {
     :root {
         --gridWidth: 44;
-    }
-    .alignRight {
-        top: calc(calc(100vw / var(--gridWidth)) * 5.6);
-        right: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    svg {
-        width: calc(calc(100vw / var(--gridWidth)) * 2);
-        stroke-width: calc(calc(100vw / var(--gridWidth)) * .01); /* same as desktop */
-    }
-    #svgMail {
-        right: calc(calc(100vw / var(--gridWidth)) * 6);
-    }
-    #svgTel {
-        right: calc(calc(100vw / var(--gridWidth)) * 3);
-    }
-    #svgSocial {
-        right: calc(calc(100vw / var(--gridWidth)) * 0); /* same as desktop */
-    }
-    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .navTL, .navTR {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275)); /* same as desktop */
-    }
-    .navTL {
-        top: calc(calc(100vw / var(--gridWidth)) * 2);
-        left: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .navTR {
-        top: calc(calc(100vw / var(--gridWidth)) * 2);
-        right: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .navCL {
-        left: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .navCR {
-        right: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .navBL {
-        bottom: calc(calc(100vw / var(--gridWidth)) * 2);
-        left: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .navBR {
-        bottom: calc(calc(100vw / var(--gridWidth)) * 2);
-        right: calc(calc(100vw / var(--gridWidth)) * 2);
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13)); /* same as desktop */
-    }
-    .navTR, .toggle {
-        display: block; /* same as desktop */
-    }
-    .gridContainer {
-        grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-        grid-template-rows: repeat(133, calc(100vw / var(--gridWidth)));
-    }
-    .containerInfo, .containerImpressum {
-        margin: calc(calc(100vw / var(--gridWidth)) * 5.6) calc(calc(100vw / var(--gridWidth)) * 2) calc(calc(100vw / var(--gridWidth)) * 5.45) calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .containerSection {
-        width: calc(calc(100vw / var(--gridWidth)) * 27);
-        position: relative; /* same as desktop */
-    }
-    .fontM, .parallaxfontL {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8); /* same as desktop */
-        line-height: calc(calc(100vw / var(--gridWidth)) * 2); /* same as desktop */
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .fontS, .parallaxfontM {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9); /* same as desktop */
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1); /* same as desktop */
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 2);
-    }
-    .lightbox img {
-        max-width: calc(calc(100vw / var(--gridWidth)) * 34);
-        max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 12);
-    }
-}
-
-/* DESKTOP */
-
-@media only screen and (min-width: 1160px) {
-    :root {
-        --gridWidth: 44;
-    }
-    .alignRight {
-        top: calc(calc(100vw / var(--gridWidth)) * 2.6);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    svg {
-        width: calc(calc(100vw / var(--gridWidth)) * 1);
-        stroke-width: calc(calc(100vw / var(--gridWidth)) * .01);
-    }
-    #svgMail {
-        right: calc(calc(100vw / var(--gridWidth)) * 3);
-    }
-    #svgTel {
-        right: calc(calc(100vw / var(--gridWidth)) * 1.5);
-    }
-    #svgSocial {
-        right: calc(calc(100vw / var(--gridWidth)) * 0);
-    }
-    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .navTL, .navTR {
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * -.275));
-    }
-    .navTL {
-        top: calc(calc(100vw / var(--gridWidth)) * 1);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .navTR {
-        top: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .navCL {
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .navCR {
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .navBL {
-        bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .1));
-    }
-    .navBR {
-        bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
-        -webkit-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        -moz-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        -ms-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        -o-transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-        transform: translateY(calc(calc(100vw / var(--gridWidth)) * .13));
-    }
-    .navTR, .toggle {
-        display: block;
-    }
-
-
-
-
-
-
-
-
-
-                        .gridContainer {
-                            grid-template-columns: repeat(var(--gridWidth), calc(100vw / var(--gridWidth)));
-                        }
-                        .gridContainer + .gridContainer {
-                            margin-top: calc(calc(100vw / var(--gridWidth)) * 14);
-                        }
-                        .buechehof {
-                            grid-template-rows: repeat(126, calc(100vw / var(--gridWidth)));
-                            margin-top: calc(calc(100vw / var(--gridWidth)) * 3);
-                        }
-                        .wartenbergstrasse {
-                            grid-template-rows: repeat(58, calc(100vw / var(--gridWidth)));
-                        }
-                        .oubliettes {
-                            grid-template-rows: repeat(56, calc(100vw / var(--gridWidth)));
-                            margin-bottom: calc(calc(100vw / var(--gridWidth)) * 3);
-                        }
-
-
-
-
-
-
-
-
-
-
-    .containerInfo, .containerImpressum {
-        margin: calc(calc(100vw / var(--gridWidth)) * .8) calc(calc(100vw / var(--gridWidth)) * 15) calc(calc(100vw / var(--gridWidth)) * 0) calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .containerSection {
-        width: calc(calc(100vw / var(--gridWidth)) * 13.5);
-        position: relative;
-    }
-    .parallaxfontL {
-        font-size: calc(calc(100vw / var(--gridWidth)) * 1.8);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 2);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
-    }
-    .fontM, .parallaxfontM {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .9);
-        line-height: calc(calc(100vw / var(--gridWidth)) * 1);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * .5);
-    }
-    .fontS {
-        font-size: calc(calc(100vw / var(--gridWidth)) * .45);
-        line-height: calc(calc(100vw / var(--gridWidth)) * .5);
-        margin-bottom: calc(calc(100vw / var(--gridWidth)) * 1);
-    }
-    .lightbox img {
-        max-width: calc(calc(100vw / var(--gridWidth)) * 38);
-        max-height: calc(100vh - calc(100vw / var(--gridWidth)) * 6);
-    }
-}
-
-/* ULTRAWIDE */
-
-@media only screen and (min-width: 1160px) and (min-aspect-ratio: 21/9) {
-    :root {
-        --gridWidth: 44;
-        --viewWidth: 50vw;
-        --margin: 25vw;
-    }
-    .alignRight {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6);
-        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
-    }
-    svg {
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        stroke-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * .01);
-    }
-    #svgMail {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
-    }
-    #svgTel {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
-    }
-    #svgSocial {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 0);
-    }
-    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navTL, .navTR {
         -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
@@ -543,6 +290,105 @@ a:hover, svg:hover, .redirect:hover {
         -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
         transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
     }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - TABLET - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 768px) and (max-width: 1160px) {
+    :root {
+        --viewWidth: 100vw;
+        --margin: 0vw;
+    }
+    .alignRight {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 5.6);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    svg {
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    #svgMail {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 6);
+    }
+    #svgTel {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+    }
+    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
+        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .navTL {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .navTR {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .navCL {
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .navCR {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .navBL {
+        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
+    }
+    .navBR {
+        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+    }
+    .gridContainer {
+        grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(133, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .containerInfo, .containerImpressum {
+        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 5.6) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2) calc(calc(var(--viewWidth) / var(--gridWidth)) * 5.45) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .fontM, .parallaxfontL {
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.8);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    .fontS, .parallaxfontM {
+        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .9);
+        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .lightbox img {
+        max-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 34);
+        max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 12);
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - DESKTOP, ULTRAWIDE - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 1160px) {
+    .alignRight {
+        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6);
+        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    svg {
+        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    #svgMail {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+    }
+    #svgTel {
+        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
+    }
+    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
+        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
     .navTL {
         top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
         left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
@@ -560,35 +406,10 @@ a:hover, svg:hover, .redirect:hover {
     .navBL {
         bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
         left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
     }
     .navBR {
         bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
         right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13));
-    }
-    .navTR, .toggle {
-        display: block;
-    }
-    .gridContainer {
-        margin: 0 var(--margin) 0 var(--margin);
-        grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
-        grid-template-rows: repeat(132, calc(var(--viewWidth) / var(--gridWidth)));
-    }
-    .containerInfo, .containerImpressum {
-        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
-    }
-    .containerSection {
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 13.5);
-        position: relative;
     }
     .parallaxfontL {
         font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.8);
@@ -610,6 +431,143 @@ a:hover, svg:hover, .redirect:hover {
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
 }
+
+/* - - - - - - - - - - - - - - - - - - - - DESKTOP - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 1160px) {
+    :root {
+        --viewWidth: 100vw;
+        --margin: 0vw;
+    }
+    .navBL {
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+    }
+    .navBR {
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+    }
+
+
+    
+                        .gridContainer {
+                            grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
+                        }
+                        .gridContainer + .gridContainer {
+                            margin-top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 14);
+                        }
+                        .buechehof {
+                            grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
+                            margin-top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+                        }
+                        .wartenbergstrasse {
+                            grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
+                        }
+                        .oubliettes {
+                            grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
+                            margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+                        }
+
+
+
+    .containerInfo, .containerImpressum {
+        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * .8) calc(calc(var(--viewWidth) / var(--gridWidth)) * 15) calc(calc(var(--viewWidth) / var(--gridWidth)) * 0) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - ULTRAWIDE - - - - - - - - - - - - - - - - - - - - */
+
+@media only screen and (min-width: 1160px) and (min-aspect-ratio: 21/9) {
+    :root {
+        --viewWidth: 50vw;
+        --margin: 25vw;
+    }
+    .navBL {
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+    }
+    .navBR {
+        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+    }
+
+
+
+
+
+
+
+
+
+
+    .gridContainer {
+        margin: 0 var(--margin) 0 var(--margin);
+        grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(132, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+
+
+
+
+
+
+
+
+
+
+    .containerInfo, .containerImpressum {
+        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MOBILE FONT POSITION */
 
