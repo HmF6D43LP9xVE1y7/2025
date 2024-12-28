@@ -79,7 +79,7 @@ body {
 }
 /* indent, p amount = after which block of targeted p block to apply style to, 2x p = after first block, 2x = after second */
 p + p {
-    text-indent: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+    text-indent: calc((var(--viewWidth) / var(--gridWidth)) * 2);
 }
 .alignRight {
     position: fixed;
@@ -88,10 +88,10 @@ p + p {
 svg {
     position: absolute;
     stroke: black;
-    stroke-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * .01);
+    stroke-width: calc((var(--viewWidth) / var(--gridWidth)) * .01);
 }
 #svgSocial {
-    right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 0);
+    right: calc((var(--viewWidth) / var(--gridWidth)) * 0);
 }
 a, svg {
     pointer-events: all;
@@ -204,45 +204,45 @@ a:hover, svg:hover {
         --margin: 0vw;
     }
     svg {
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
+        width: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     #svgMail {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 4.5);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 4.5);
     }
     #svgTel {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.25);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 2.25);
     }
     .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
+        height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     .navTL, .navTR {
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.225));
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
     }
     .navTL {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navBL {
-        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .3));
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
     }
     .navBR {
-        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .065));
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
     }
     .navTR, .navCL, .navCR, .navBC, .toggle {
         display: none;
@@ -252,23 +252,23 @@ a:hover, svg:hover {
         grid-template-rows: repeat(70, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
-        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) calc(calc(var(--viewWidth) / var(--gridWidth)) * 3) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     [class^="gridItem"] {
         pointer-events: none;
     }
     .fontM, .parallaxfontL {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.35);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.35);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .fontS, .parallaxfontM {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .675);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * .75);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .675);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * .75);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .lightbox img {
-        max-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 14);
+        max-width: calc((var(--viewWidth) / var(--gridWidth)) * 14);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
     .imgContainer {
@@ -284,11 +284,11 @@ a:hover, svg:hover {
         --gridWidth: 44;
     }
     .navTL, .navTR {
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * -.275));
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
     }
 }
 
@@ -300,72 +300,72 @@ a:hover, svg:hover {
         --margin: 0vw;
     }
     .alignRight {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 5.6);
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 5.6);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     svg {
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        width: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     #svgMail {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 6);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 6);
     }
     #svgTel {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
     .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navTL {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navTR {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navCL {
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navCR {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navBL {
-        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .4));
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
     }
     .navBR {
-        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
     }
     .gridContainer {
         grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
         grid-template-rows: repeat(133, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .containerInfo, .containerImpressum {
-        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 5.6) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2) calc(calc(var(--viewWidth) / var(--gridWidth)) * 5.45) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * 5.6) calc((var(--viewWidth) / var(--gridWidth)) * 2) calc((var(--viewWidth) / var(--gridWidth)) * 5.45) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .fontM, .parallaxfontL {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.8);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .fontS, .parallaxfontM {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .9);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .lightbox img {
-        max-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 34);
+        max-width: calc((var(--viewWidth) / var(--gridWidth)) * 34);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 12);
     }
 }
@@ -374,60 +374,60 @@ a:hover, svg:hover {
 
 @media only screen and (min-width: 1160px) {
     .alignRight {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6);
-        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 2.6);
+        right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     svg {
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        width: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     #svgMail {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
     #svgTel {
-        right: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.5);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
-        height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navTL {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navTR {
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navCL {
-        left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        left: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navCR {
-        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navBL {
-        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        left: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navBR {
-        bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        right: calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .parallaxfontL {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1.8);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
     }
     .fontM, .parallaxfontM {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .9);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
     }
     .fontS {
-        font-size: calc(calc(var(--viewWidth) / var(--gridWidth)) * .45);
-        line-height: calc(calc(var(--viewWidth) / var(--gridWidth)) * .5);
-        margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .45);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * .5);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .lightbox img {
-        max-width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 38);
+        max-width: calc((var(--viewWidth) / var(--gridWidth)) * 38);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
     }
 }
@@ -440,18 +440,18 @@ a:hover, svg:hover {
         --margin: 0vw;
     }
     .navBL {
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .2));
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
     }
     .navBR {
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
     }
 
 
@@ -460,24 +460,24 @@ a:hover, svg:hover {
                             grid-template-columns: repeat(var(--gridWidth), calc(var(--viewWidth) / var(--gridWidth)));
                         }
                         .gridContainer + .gridContainer {
-                            margin-top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 14);
+                            margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
                         }
                         .buechehof {
                             grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
-                            margin-top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+                            margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                         }
                         .wartenbergstrasse {
                             grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
                         }
                         .oubliettes {
                             grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
-                            margin-bottom: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+                            margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                         }
 
 
 
     .containerInfo, .containerImpressum {
-        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * .8) calc(calc(var(--viewWidth) / var(--gridWidth)) * 15) calc(calc(var(--viewWidth) / var(--gridWidth)) * 0) calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((var(--viewWidth) / var(--gridWidth)) * 15) calc((var(--viewWidth) / var(--gridWidth)) * 0) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
 }
 
@@ -489,18 +489,18 @@ a:hover, svg:hover {
         --margin: 25vw;
     }
     .navBL {
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .1));
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .1));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .1));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .1));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .1));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .1));
     }
     .navBR {
-        -webkit-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc(calc(var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
     }
 
 
@@ -515,7 +515,7 @@ a:hover, svg:hover {
 
 
     .containerInfo, .containerImpressum {
-        margin: calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.6) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc(calc(var(--viewWidth) / var(--gridWidth)) * 2.45) calc(calc(calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * 2.6) calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin)) calc((var(--viewWidth) / var(--gridWidth)) * 2.45) calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
 }
 
@@ -523,42 +523,42 @@ a:hover, svg:hover {
 
 @media only screen and (max-width: 767px) {
     .parallaxOubliettesA {
-        top: calc(calc(100vw / var(--gridWidth)) * 47);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 47);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxOubliettesB {
-        top: calc(calc(100vw / var(--gridWidth)) * 50);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 50);
+        left: calc((100vw / var(--gridWidth)) * 1);
+        right: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxOubliettesC {
-        top: calc(calc(100vw / var(--gridWidth)) * 58.25);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
-        right: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 58.25);
+        left: calc((100vw / var(--gridWidth)) * 1);
+        right: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxWartenbergstrasseA {
-        top: calc(calc(100vw / var(--gridWidth)) * 31);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 31);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxWartenbergstrasseB {
-        top: calc(calc(100vw / var(--gridWidth)) * 34);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 34);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxBuechehofA {
-        top: calc(calc(100vw / var(--gridWidth)) * 86);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 86);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxBuechehofB {
-        top: calc(calc(100vw / var(--gridWidth)) * 89);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 89);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxHirzbodenwegA {
-        top: calc(calc(100vw / var(--gridWidth)) * 96);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 96);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
     .parallaxHirzbodenwegB {
-        top: calc(calc(100vw / var(--gridWidth)) * 99);
-        left: calc(calc(100vw / var(--gridWidth)) * 1);
+        top: calc((100vw / var(--gridWidth)) * 99);
+        left: calc((100vw / var(--gridWidth)) * 1);
     }
 }
 
@@ -566,42 +566,42 @@ a:hover, svg:hover {
 
 @media only screen and (min-width: 768px) {
     .parallaxOubliettesA {
-        top: calc(calc(100vw / var(--gridWidth)) * -5);
-        left: calc(calc(100vw / var(--gridWidth)) * 31);
+        top: calc((100vw / var(--gridWidth)) * -5);
+        left: calc((100vw / var(--gridWidth)) * 31);
     }
     .parallaxOubliettesB {
-        width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * -2);
-        left: calc(calc(100vw / var(--gridWidth)) * 17);
+        width: calc((100vw / var(--gridWidth)) * 26);
+        top: calc((100vw / var(--gridWidth)) * -2);
+        left: calc((100vw / var(--gridWidth)) * 17);
     }
     .parallaxOubliettesC {
-        width: calc(calc(100vw / var(--gridWidth)) * 26);
-        top: calc(calc(100vw / var(--gridWidth)) * 115);
-        left: calc(calc(100vw / var(--gridWidth)) * 17);
+        width: calc((100vw / var(--gridWidth)) * 26);
+        top: calc((100vw / var(--gridWidth)) * 115);
+        left: calc((100vw / var(--gridWidth)) * 17);
     }
     .parallaxWartenbergstrasseA {
-        top: calc(calc(100vw / var(--gridWidth)) * 28);
-        left: calc(calc(100vw / var(--gridWidth)) * 2);
+        top: calc((100vw / var(--gridWidth)) * 28);
+        left: calc((100vw / var(--gridWidth)) * 2);
     }
     .parallaxWartenbergstrasseB {
-        top: calc(calc(100vw / var(--gridWidth)) * 30);
-        left: calc(calc(100vw / var(--gridWidth)) * 4);
+        top: calc((100vw / var(--gridWidth)) * 30);
+        left: calc((100vw / var(--gridWidth)) * 4);
     }
     .parallaxBuechehofA {
-        top: calc(calc(100vw / var(--gridWidth)) * 126);
-        left: calc(calc(100vw / var(--gridWidth)) * 3);
+        top: calc((100vw / var(--gridWidth)) * 126);
+        left: calc((100vw / var(--gridWidth)) * 3);
     }
     .parallaxBuechehofB {
-        top: calc(calc(100vw / var(--gridWidth)) * 129);
-        left: calc(calc(100vw / var(--gridWidth)) * 5);
+        top: calc((100vw / var(--gridWidth)) * 129);
+        left: calc((100vw / var(--gridWidth)) * 5);
     }
     .parallaxHirzbodenwegA {
-        top: calc(calc(100vw / var(--gridWidth)) * 76);
-        left: calc(calc(100vw / var(--gridWidth)) * 11);
+        top: calc((100vw / var(--gridWidth)) * 76);
+        left: calc((100vw / var(--gridWidth)) * 11);
     }
     .parallaxHirzbodenwegB {
-        top: calc(calc(100vw / var(--gridWidth)) * 79);
-        left: calc(calc(100vw / var(--gridWidth)) * 13);
+        top: calc((100vw / var(--gridWidth)) * 79);
+        left: calc((100vw / var(--gridWidth)) * 13);
     }
 }
 
@@ -613,57 +613,52 @@ a:hover, svg:hover {
     }
     .parallaxOubliettesA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 105);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 31);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 105);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 31);
     }
     .parallaxOubliettesB {
         margin: 0 var(--margin) 0 var(--margin);
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 108);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
+        width: calc((var(--viewWidth) / var(--gridWidth)) * 26);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 108);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 17);
     }
     .parallaxOubliettesC {
         margin: 0 var(--margin) 0 var(--margin);
-        width: calc(calc(var(--viewWidth) / var(--gridWidth)) * 26);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 115);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 17);
+        width: calc((var(--viewWidth) / var(--gridWidth)) * 26);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 115);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 17);
     }
     .parallaxWartenbergstrasseA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 28);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 6);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 28);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 6);
     }
     .parallaxWartenbergstrasseB {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 30);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 8);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 30);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 8);
     }
     .parallaxBuechehofA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 66);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 1);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 66);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .parallaxBuechehofB {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 69);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 3);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 69);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
     .parallaxHirzbodenwegA {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 76);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 11);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 76);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 11);
     }
     .parallaxHirzbodenwegB {
         margin: 0 var(--margin) 0 var(--margin);
-        top: calc(calc(var(--viewWidth) / var(--gridWidth)) * 79);
-        left: calc(calc(var(--viewWidth) / var(--gridWidth)) * 13);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 79);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 13);
     }
 }
-
-
-
-
-
 
 .navBC {
     left: 50% !important;
@@ -676,11 +671,8 @@ a:hover, svg:hover {
     position: fixed;
     margin: 0 !important;
     z-index: 2;
-    height: calc(calc(100vw / var(--gridWidth)) * 1.5) !important;
+    height: calc((100vw / var(--gridWidth)) * 1.5) !important;
 }
-
-
-
 
 #fader {
     position: fixed;
@@ -730,5 +722,5 @@ a:hover, svg:hover {
 }
 body {
     background: linear-gradient(-90deg, rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), white;
-    background-size: calc(calc(100vw / var(--gridWidth)) * 15) calc(calc(100vw / var(--gridWidth)) * 1);
+    background-size: calc((100vw / var(--gridWidth)) * 15) calc((100vw / var(--gridWidth)) * 1);
 }
