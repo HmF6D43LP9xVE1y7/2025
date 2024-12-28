@@ -173,43 +173,40 @@
 		<script src="js/preload.min.js">
 		</script>
 		<script>
-			// Function to check if all images are loaded
-function checkImagesLoaded() {
-    const images = document.querySelectorAll('img'); // Select all img elements
-    let loadedCount = 0;
+			function checkBackgroundImages() {
+    const imgContainers = document.querySelectorAll('.imgContainer');
 
-    // Iterate through all images
-    images.forEach((img) => {
-        // Check if the image is already loaded
-        if (img.complete) {
-            loadedCount++; // Increment count if the image is complete
+    let allLoaded = true;
+
+    imgContainers.forEach(container => {
+        const bgImage = window.getComputedStyle(container).backgroundImage;
+
+        // Extract the URL from the background-image property
+        const urlMatch = bgImage.match(/url\(["']?([^"']+)["']?\)/);
+        if (urlMatch && urlMatch[1]) {
+            const imgUrl = urlMatch[1];
+            const img = new Image();
+            img.src = imgUrl;
+
+            // Check if the image is complete
+            if (!img.complete) {
+                allLoaded = false;
+            }
         } else {
-            // Add load event listener for images that are not loaded yet
-            img.addEventListener('load', () => {
-                loadedCount++;
-                checkIfAllImagesLoaded(images.length, loadedCount);
-            });
-            // Add error event listener in case some images fail to load
-            img.addEventListener('error', () => {
-                loadedCount++;
-                checkIfAllImagesLoaded(images.length, loadedCount);
-            });
+            // If there's no background image, treat it as loaded
+            allLoaded = false; // or true, depending on your requirements
         }
     });
 
-    // Check if all images were loaded (including already complete ones)
-    checkIfAllImagesLoaded(images.length, loadedCount);
+    return allLoaded;
 }
 
-// Function to check if all images have been loaded
-function checkIfAllImagesLoaded(totalImages, loadedCount) {
-    if (loadedCount === totalImages) {
-        alert('All images are loaded and cached.');
-    }
+// Usage
+if (checkBackgroundImages()) {
+    console.log("All background images are loaded.");
+} else {
+    console.log("Some background images are still loading or are missing.");
 }
-
-// Run the check when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', checkImagesLoaded);
 		</script>
 	</body>
 </html>
