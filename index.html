@@ -172,5 +172,44 @@
 		</script>
 		<script src="js/preload.min.js">
 		</script>
+		<script>
+			// Function to check if all images are loaded
+function checkImagesLoaded() {
+    const images = document.querySelectorAll('img'); // Select all img elements
+    let loadedCount = 0;
+
+    // Iterate through all images
+    images.forEach((img) => {
+        // Check if the image is already loaded
+        if (img.complete) {
+            loadedCount++; // Increment count if the image is complete
+        } else {
+            // Add load event listener for images that are not loaded yet
+            img.addEventListener('load', () => {
+                loadedCount++;
+                checkIfAllImagesLoaded(images.length, loadedCount);
+            });
+            // Add error event listener in case some images fail to load
+            img.addEventListener('error', () => {
+                loadedCount++;
+                checkIfAllImagesLoaded(images.length, loadedCount);
+            });
+        }
+    });
+
+    // Check if all images were loaded (including already complete ones)
+    checkIfAllImagesLoaded(images.length, loadedCount);
+}
+
+// Function to check if all images have been loaded
+function checkIfAllImagesLoaded(totalImages, loadedCount) {
+    if (loadedCount === totalImages) {
+        alert('All images are loaded and cached.');
+    }
+}
+
+// Run the check when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', checkImagesLoaded);
+		</script>
 	</body>
 </html>
