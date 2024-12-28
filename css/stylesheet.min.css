@@ -667,7 +667,7 @@ a:hover, svg:hover {
     height: calc((100vw / var(--gridWidth)) * 1.5) !important;
 }
 
-#fader {
+.fader {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -696,22 +696,20 @@ a:hover, svg:hover {
     to { opacity: 1 }
 }
 
-#fader.fade-out {
+.fader.fade-out {
     opacity: 0;
     animation-name: fade-out;
 }
-#fader.fade-in {
+.fader.fade-in {
     opacity: 1;
     animation-name: fade-in;
 }
-
-
 
 /* DEBUG */
 
 * {
     background-color: rgba(255, 0, 0, .2);
-    outline: 1px dashed black !important;
+    outline: 2px dashed black !important;
 }
 body {
     background: linear-gradient(-90deg, rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), white;
