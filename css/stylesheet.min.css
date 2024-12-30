@@ -577,7 +577,7 @@ a:hover, svg:hover {
         width: calc(100vw - ((100vw / var(--gridWidth)) * 3));
     }
     .parallaxWartenbergstrasseB {
-        top: calc((100vw / var(--gridWidth)) * 30);
+        top: calc((100vw / var(--gridWidth)) * 31);
         left: calc((100vw / var(--gridWidth)) * 4);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 5));
     }
@@ -602,7 +602,7 @@ a:hover, svg:hover {
         width: calc(100vw - ((100vw / var(--gridWidth)) * 3));
     }
     .parallaxGartenwegB {
-        top: calc((100vw / var(--gridWidth)) * 7);
+        top: calc((100vw / var(--gridWidth)) * 8);
         left: calc((100vw / var(--gridWidth)) * 4);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 5));
     }
