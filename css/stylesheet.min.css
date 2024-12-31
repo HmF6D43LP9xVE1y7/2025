@@ -201,7 +201,7 @@ a:hover, svg:hover {
         --margin: 0vw;
     }
     /* indent, p amount = after which block of targeted p block to apply style to, 2x p = after first block, 2x = after second */
-    p:nth-of-type(2) {
+    p + p {
         text-indent: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     svg {
@@ -309,7 +309,7 @@ a:hover, svg:hover {
         --gridWidth: 44;
     }
     /* indent, p amount = after which block of targeted p block to apply style to, 2x p = after first block, 2x = after second */
-    p:nth-of-type(2) {
+    p + p {
         text-indent: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navTL, .navTR {
