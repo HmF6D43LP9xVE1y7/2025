@@ -250,9 +250,42 @@ a:hover, svg:hover {
     .navTR, .navCL, .navCR, .navBC, .toggle {
         display: none;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     .gridContainer {
         grid-template-rows: repeat(70, calc(var(--viewWidth) / var(--gridWidth)));
     }
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .containerInfo, .containerImpressum {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
@@ -346,9 +379,41 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
     }
-    .gridContainer {
-        grid-template-rows: repeat(133, calc(var(--viewWidth) / var(--gridWidth)));
-    }
+
+
+
+
+
+
+
+
+
+                                            .gridContainer + .gridContainer {
+                                                margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
+                                            }
+                                            .buechehof {
+                                                grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
+                                                margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+                                            }
+                                            .wartenbergstrasse {
+                                                grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
+                                            }
+                                            .oubliettes {
+                                                grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
+                                            }
+                                            .gartenweg {
+                                                grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+                                                margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
+                                            }
+
+
+
+
+
+
+
+
+
     .containerInfo, .containerImpressum {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 5.6) calc((var(--viewWidth) / var(--gridWidth)) * 2) calc((var(--viewWidth) / var(--gridWidth)) * 5.45) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
@@ -455,8 +520,6 @@ a:hover, svg:hover {
     
 
 
-    
-
                         .gridContainer + .gridContainer {
                             margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
                         }
@@ -508,7 +571,24 @@ a:hover, svg:hover {
 
                         .gridContainer {
                             margin: 0 var(--margin) 0 var(--margin);
-                            grid-template-rows: repeat(132, calc(var(--viewWidth) / var(--gridWidth)));
+                        }
+                        .gridContainer + .gridContainer {
+                            margin: 0 var(--margin) 0 var(--margin);
+                            margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
+                        }
+                        .buechehof {
+                            grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
+                            margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 3) !important;
+                        }
+                        .wartenbergstrasse {
+                            grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
+                        }
+                        .oubliettes {
+                            grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
+                        }
+                        .gartenweg {
+                            grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+                            margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3) !important;
                         }
     
 
