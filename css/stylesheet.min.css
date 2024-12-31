@@ -200,8 +200,7 @@ a:hover, svg:hover {
         --viewWidth: 100vw;
         --margin: 0vw;
     }
-    /* indent, p amount = after which block of targeted p block to apply style to, 2x p = after first block, 2x = after second */
-    p + p {
+    p:not(:nth-child(1)) {
         text-indent: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     svg {
@@ -252,11 +251,6 @@ a:hover, svg:hover {
 
 
 
-                                                                        /*
-                                                                            .gridContainer {
-                                                                                grid-template-rows: repeat(70, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                            }
-                                                                                */
                                                                                 .gridContainer + .gridContainer {
                                                                                     margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
                                                                                 }
@@ -290,18 +284,6 @@ a:hover, svg:hover {
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * .75);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    /*
-    .fontM, .contentFontL {
-        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.35);
-        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-    }
-    .fontS, .contentFontM {
-        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .675);
-        line-height: calc((var(--viewWidth) / var(--gridWidth)) * .75);
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-    }
-    */
     .lightbox img {
         max-width: calc((var(--viewWidth) / var(--gridWidth)) * 14);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
@@ -318,8 +300,7 @@ a:hover, svg:hover {
     :root {
         --gridWidth: 44;
     }
-    /* indent, p amount = after which block of targeted p block to apply style to, 2x p = after first block, 2x = after second */
-    p + p {
+    p:not(:nth-child(1)) {
         text-indent: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navTR {
@@ -388,6 +369,9 @@ a:hover, svg:hover {
         -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .4));
+    }
+    .navBC {
+        height: calc((var(--viewWidth) / var(--gridWidth)) * 3.25) !important;
     }
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
@@ -461,11 +445,16 @@ a:hover, svg:hover {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         left: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
+    .navBC {
+        height: calc((var(--viewWidth) / var(--gridWidth)) * 1.75) !important;
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .45) !important;
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * .5) !important;
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1) !important;
+    }
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
-
     .navFontLarge, .navFontSmall, .contentFontSmall {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -476,23 +465,6 @@ a:hover, svg:hover {
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    /*
-    .contentFontL {
-        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
-        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
-    }
-    .fontM, .contentFontM {
-        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
-        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
-    }
-    .fontS {
-        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .45);
-        line-height: calc((var(--viewWidth) / var(--gridWidth)) * .5);
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-    }
-        */
     .lightbox img {
         max-width: calc((var(--viewWidth) / var(--gridWidth)) * 38);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
@@ -719,9 +691,8 @@ a:hover, svg:hover {
     position: fixed;
     margin: 0 !important;
     z-index: 2;
-    height: calc((100vw / var(--gridWidth)) * 1.5) !important;
+    text-indent: 0 !important;
 }
-
 .fader {
     position: fixed;
     height: 100vh;
@@ -750,7 +721,6 @@ a:hover, svg:hover {
     from { opacity: 0 }
     to { opacity: 1 }
 }
-
 .fader.fade-out {
     opacity: 0;
     animation-name: fade-out;
