@@ -230,11 +230,13 @@ a:hover, svg:hover {
     .navBL {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        /*
         -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
         -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
         -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .3));
+        */
     }
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -338,11 +340,11 @@ a:hover, svg:hover {
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
         right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
-        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
     }
     .gridContainer {
         grid-template-rows: repeat(133, calc(var(--viewWidth) / var(--gridWidth)));
@@ -442,13 +444,15 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .2));
     }
+    
     .navBR {
-        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
     }
+    
 
 
     
@@ -493,11 +497,11 @@ a:hover, svg:hover {
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .1));
     }
     .navBR {
-        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
-        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .13)); /* same as desktop */
+        -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
+        transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
     }
 
 
@@ -716,7 +720,7 @@ a:hover, svg:hover {
     animation-name: fade-in;
 }
 
-/* DEBUG *//*
+/* DEBUG */
 
 * {
     background-color: rgba(255, 0, 0, .2);
