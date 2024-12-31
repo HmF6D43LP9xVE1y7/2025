@@ -217,6 +217,8 @@ a:hover, svg:hover {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     .navTR {
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
         -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
         -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
@@ -278,16 +280,28 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .9) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    .fontM, .contentfontL {
+    .navFontLarge, .contentFontLarge {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.35);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    .fontS, .contentfontM {
+    .navFontSmall, .contentFontSmall {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .675);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * .75);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
+    /*
+    .fontM, .contentFontL {
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.35);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    .fontS, .contentFontM {
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .675);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * .75);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    */
     .lightbox img {
         max-width: calc((var(--viewWidth) / var(--gridWidth)) * 14);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
@@ -395,12 +409,12 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 14) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
-    .fontM, .contentfontL {
+    .navFontLarge, .contentFontLarge {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    .fontS, .contentfontM {
+    .navFontSmall, .contentFontSmall {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
@@ -451,12 +465,24 @@ a:hover, svg:hover {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
-    .contentfontL {
+
+    .navFontLarge, .navFontSmall, .contentFontSmall {
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
+    }
+    .contentFontLarge {
+        font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
+        line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    /*
+    .contentFontL {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
     }
-    .fontM, .contentfontM {
+    .fontM, .contentFontM {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
@@ -466,6 +492,7 @@ a:hover, svg:hover {
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * .5);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
+        */
     .lightbox img {
         max-width: calc((var(--viewWidth) / var(--gridWidth)) * 38);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
