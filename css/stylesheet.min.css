@@ -102,7 +102,7 @@ a:hover, svg:hover {
 .navTR, .navBR {
     text-align: right;
 }
-.navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
+.navTR, .navCL, .navCR, .navBL, .navBR {
     position: fixed;
     margin: 0 !important;
     z-index: 2;
@@ -213,19 +213,15 @@ a:hover, svg:hover {
     #svgTel {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 2.25);
     }
-    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
+    .navTR, .navCL, .navCR, .navBL, .navBR {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
-    .navTL, .navTR {
+    .navTR {
         -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
         -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
         -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.225));
-    }
-    .navTL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navBL {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -247,7 +243,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065));
     }
-    .navTR, .navCL, .navCR, .navBC, .toggle {
+    .navCL, .navCR, .navBC, .toggle {
         display: none;
     }
 
@@ -312,7 +308,7 @@ a:hover, svg:hover {
     p + p {
         text-indent: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
-    .navTL, .navTR {
+    .navTR {
         -webkit-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
         -moz-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
         -ms-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
@@ -357,12 +353,8 @@ a:hover, svg:hover {
     #svgTel {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
-    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
+    .navTR, .navCL, .navCR, .navBL, .navBR {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
-    }
-    .navTL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 2);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navTR {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 2);
@@ -438,12 +430,8 @@ a:hover, svg:hover {
     #svgTel {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
-    .navTL, .navTR, .navCL, .navCR, .navBL, .navBR {
+    .navTR, .navCL, .navCR, .navBL, .navBR {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-    }
-    .navTL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
-        left: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navTR {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
