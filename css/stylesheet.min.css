@@ -136,7 +136,7 @@ a:hover, svg:hover {
     perspective-origin: 0%;
     z-index: 0;
 }
-.parallaxBackground {
+.parallaxBackground:not(.parallaxForeground) {
     position: absolute;
     top: 0;
     right: 0;
@@ -149,16 +149,16 @@ a:hover, svg:hover {
     transform: translateZ(0);
 }
 .parallaxForeground {
-    -webkit-transform-origin: 0 !important;
-    -moz-transform-origin: 0 !important;
-    -ms-transform-origin: 0 !important;
-    -o-transform-origin: 0 !important;
-    transform-origin: 0 !important;
-    -webkit-transform: translateZ(.35rem) scale(.65) !important;
-    -moz-transform: translateZ(.35rem) scale(.65) !important;
-    -ms-transform: translateZ(.35rem) scale(.65) !important;
-    -o-transform: translateZ(.35rem) scale(.65) !important;
-    transform: translateZ(.35rem) scale(.65) !important;
+    -webkit-transform-origin: 0;
+    -moz-transform-origin: 0;
+    -ms-transform-origin: 0;
+    -o-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-transform: translateZ(.35rem) scale(.65);
+    -moz-transform: translateZ(.35rem) scale(.65);
+    -ms-transform: translateZ(.35rem) scale(.65);
+    -o-transform: translateZ(.35rem) scale(.65);
+    transform: translateZ(.35rem) scale(.65);
     pointer-events: none;
 }
 .contentFont {
