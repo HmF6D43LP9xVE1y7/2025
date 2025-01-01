@@ -251,12 +251,17 @@ a:hover, svg:hover {
 
 
 
-                                                                                .gridContainer + .gridContainer {
+                                                                                .gridContainer:not(:nth-of-type(1)) {
                                                                                     margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
+                                                                                }
+                                                                                .gridContainer:nth-of-type(1) {
+                                                                                    padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+                                                                                }
+                                                                                .gridContainer:nth-of-type(4) {
+                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
                                                                                 }
                                                                                 .buechehof {
                                                                                     grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                    margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                                                                                 }
                                                                                 .wartenbergstrasse {
                                                                                     grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
@@ -266,7 +271,6 @@ a:hover, svg:hover {
                                                                                 }
                                                                                 .gartenweg {
                                                                                     grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                    margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
                                                                                 }
 
 
@@ -310,12 +314,18 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
     }
-                                                                                .gridContainer + .gridContainer {
+
+                                                                                .gridContainer:not(:nth-of-type(1)) {
                                                                                     margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
+                                                                                }
+                                                                                .gridContainer:nth-of-type(1) {
+                                                                                    padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+                                                                                }
+                                                                                .gridContainer:nth-of-type(4) {
+                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                                                                                 }
                                                                                 .buechehof {
                                                                                     grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                    margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                                                                                 }
                                                                                 .wartenbergstrasse {
                                                                                     grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
@@ -407,9 +417,6 @@ a:hover, svg:hover {
         max-width: calc((var(--viewWidth) / var(--gridWidth)) * 34);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 12);
     }
-    .gartenweg {
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
-    }
 }
 
 /* - - - - - - - - - - - - - - - - - - - - DESKTOP, ULTRAWIDE - - - - - - - - - - - - - - - - - - - - */
@@ -468,9 +475,6 @@ a:hover, svg:hover {
     .lightbox img {
         max-width: calc((var(--viewWidth) / var(--gridWidth)) * 38);
         max-height: calc(100vh - calc(var(--viewWidth) / var(--gridWidth)) * 6);
-    }
-    .gartenweg {
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
 }
 
@@ -730,7 +734,7 @@ a:hover, svg:hover {
     animation-name: fade-in;
 }
 
-/* DEBUG *//*
+/* DEBUG */
 
 * {
     background-color: rgba(255, 0, 0, .2);
