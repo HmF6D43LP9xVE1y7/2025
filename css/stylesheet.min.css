@@ -319,7 +319,7 @@ a:hover, svg:hover {
                                                                                     margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
                                                                                 }
                                                                                 .buechehof {
-                                                                                    grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
+                                                                                    grid-template-rows: repeat(117, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
                                                                                 .wartenbergstrasse {
                                                                                     grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
