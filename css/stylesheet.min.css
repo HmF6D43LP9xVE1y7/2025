@@ -258,19 +258,19 @@ a:hover, svg:hover {
                                                                                     padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                                                                                 }
                                                                                 .gridContainer:nth-of-type(4) {
-                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
+                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3.5);
                                                                                 }
                                                                                 .buechehof {
-                                                                                    grid-template-rows: repeat(226, calc(var(--viewWidth) / var(--gridWidth)));
+                                                                                    grid-template-rows: repeat(211, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
                                                                                 .wartenbergstrasse {
-                                                                                    grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
+                                                                                    grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
                                                                                 .oubliettes {
-                                                                                    grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
+                                                                                    grid-template-rows: repeat(106, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
                                                                                 .gartenweg {
-                                                                                    grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+                                                                                    grid-template-rows: repeat(184, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
 
 
@@ -743,7 +743,7 @@ a:hover, svg:hover {
     animation-name: fade-in;
 }
 
-/* DEBUG */
+/* DEBUG *//*
 
 * {
     background-color: rgba(255, 0, 0, .2);
