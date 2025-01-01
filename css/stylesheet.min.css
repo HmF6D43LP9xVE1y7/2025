@@ -321,9 +321,6 @@ a:hover, svg:hover {
                                                                                 .gridContainer:nth-of-type(1) {
                                                                                     padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                                                                                 }
-                                                                                .gridContainer:nth-of-type(4) {
-                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
-                                                                                }
                                                                                 .buechehof {
                                                                                     grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
@@ -395,7 +392,9 @@ a:hover, svg:hover {
 
 
 
-
+                                                                                .gridContainer:nth-of-type(4) {
+                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
+                                                                                }
                                                                             
 
 
@@ -462,6 +461,12 @@ a:hover, svg:hover {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
+
+                                                                                    .gridContainer:nth-of-type(4) {
+                                                                                        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+                                                                                    }
+
+
     .navFontLarge, .navFontSmall, .contentFontSmall {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -734,7 +739,7 @@ a:hover, svg:hover {
     animation-name: fade-in;
 }
 
-/* DEBUG */
+/* DEBUG *//*
 
 * {
     background-color: rgba(255, 0, 0, .2);
