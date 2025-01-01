@@ -743,7 +743,7 @@ a:hover, svg:hover {
     animation-name: fade-in;
 }
 
-/* DEBUG *//*
+/* DEBUG */
 
 * {
     background-color: rgba(255, 0, 0, .2);
