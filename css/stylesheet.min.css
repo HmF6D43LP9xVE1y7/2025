@@ -77,10 +77,6 @@ body {
     -o-text-decoration: underline;
     text-decoration: underline;
 }
-.alignRight {
-    position: fixed;
-    text-align: right;
-}
 svg {
     position: absolute;
     stroke: black;
@@ -114,6 +110,13 @@ a:hover, svg:hover {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+.navCL:active, .navCR:active {
+    -webkit-transform: translateX(0%) translateY(-50%) scale(0.9);
+    -moz-transform: translateX(0%) translateY(-50%) scale(0.9);
+    -ms-transform: translateX(0%) translateY(-50%) scale(0.9);
+    -o-transform: translateX(0%) translateY(-50%) scale(0.9);
+    transform: translateX(0%) translateY(-50%) scale(0.9);
 }
 .gridContainer {
     display: grid;
@@ -187,9 +190,6 @@ a:hover, svg:hover {
 }
 .lightboxCount {
     text-align: center;
-}
-.noMargin {
-    margin: 0 !important;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - MOBILE - - - - - - - - - - - - - - - - - - - - */
@@ -318,9 +318,6 @@ a:hover, svg:hover {
                                                                                 .gridContainer:not(:nth-of-type(1)) {
                                                                                     margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
                                                                                 }
-                                                                                .gridContainer:nth-of-type(1) {
-                                                                                    padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
-                                                                                }
                                                                                 .buechehof {
                                                                                     grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
@@ -339,12 +336,8 @@ a:hover, svg:hover {
 
 @media only screen and (min-width: 768px) and (max-width: 1160px) {
     :root {
-        --viewWidth: 100vw;
+        --viewWidth: calc(100vw - calc((100vw / var(--gridWidth)) * 2));
         --margin: 0vw;
-    }
-    .alignRight {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 5.6);
-        right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     svg {
         width: calc((var(--viewWidth) / var(--gridWidth)) * 2);
@@ -392,15 +385,26 @@ a:hover, svg:hover {
 
 
 
-                                                                                .gridContainer:nth-of-type(4) {
-                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
-                                                                                }
+
+
+
+
+    .parallaxContainer {
+        margin-left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        margin-right: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+    }
+    .gridContainer:nth-of-type(1) {
+        padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 4);
+    }
+    .gridContainer:nth-of-type(4) {
+        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
+    }
                                                                             
 
 
 
     .containerInfo, .containerImpressum {
-        margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 14) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 16.5) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navFontLarge, .contentFontLarge {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
@@ -421,10 +425,6 @@ a:hover, svg:hover {
 /* - - - - - - - - - - - - - - - - - - - - DESKTOP, ULTRAWIDE - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (min-width: 1160px) {
-    .alignRight {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 2.6);
-        right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
-    }
     svg {
         width: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
@@ -462,6 +462,10 @@ a:hover, svg:hover {
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
 
+
+                                                                                    .gridContainer:nth-of-type(1) {
+                                                                                        padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+                                                                                    }
                                                                                     .gridContainer:nth-of-type(4) {
                                                                                         padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
                                                                                     }
@@ -506,7 +510,7 @@ a:hover, svg:hover {
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
     }
     .containerInfo, .containerImpressum {
-        margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((var(--viewWidth) / var(--gridWidth)) * 15) calc((var(--viewWidth) / var(--gridWidth)) * 2.2) calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((var(--viewWidth) / var(--gridWidth)) * 15.5) calc((var(--viewWidth) / var(--gridWidth)) * 2.2) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
 }
 
@@ -531,12 +535,12 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
     }
-    .gridContainer {
+    .parallaxBackground, .parallaxForeground {
         margin-right: var(--margin);
         margin-left: var(--margin);
     }
     .containerInfo, .containerImpressum {
-        margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((calc(var(--viewWidth) / var(--gridWidth)) * 15) + var(--margin)) calc((var(--viewWidth) / var(--gridWidth)) * 2.5) calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+        margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((calc(var(--viewWidth) / var(--gridWidth)) * 15.5) + var(--margin)) calc((var(--viewWidth) / var(--gridWidth)) * 2.5) calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
 }
 
