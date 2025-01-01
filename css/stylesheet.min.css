@@ -261,7 +261,7 @@ a:hover, svg:hover {
                                                                                     padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
                                                                                 }
                                                                                 .buechehof {
-                                                                                    grid-template-rows: repeat(126, calc(var(--viewWidth) / var(--gridWidth)));
+                                                                                    grid-template-rows: repeat(226, calc(var(--viewWidth) / var(--gridWidth)));
                                                                                 }
                                                                                 .wartenbergstrasse {
                                                                                     grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
