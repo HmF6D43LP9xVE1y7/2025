@@ -194,7 +194,7 @@ a:hover, svg:hover {
 
 /* - - - - - - - - - - - - - - - - - - - - MOBILE - - - - - - - - - - - - - - - - - - - - */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.9px) {
     :root {
         --gridWidth: 16;
         --viewWidth: 100vw;
@@ -300,7 +300,7 @@ a:hover, svg:hover {
 
 /* - - - - - - - - - - - - - - - - - - - - TABLET, DESKTOP, ULTRAWIDE - - - - - - - - - - - - - - - - - - - - */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767.9px) {
     :root {
         --gridWidth: 44;
     }
@@ -334,7 +334,7 @@ a:hover, svg:hover {
 
 /* - - - - - - - - - - - - - - - - - - - - TABLET - - - - - - - - - - - - - - - - - - - - */
 
-@media only screen and (min-width: 768px) and (max-width: 1160px) {
+@media only screen and (min-width: 768px) and (max-width: 1159.9px) {
     :root {
         --viewWidth: calc(100vw - calc((100vw / var(--gridWidth)) * 2));
         --margin: 0vw;
@@ -546,7 +546,7 @@ a:hover, svg:hover {
 
 /* MOBILE FONT POSITION */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.9px) {
     .parallaxOubliettesA {
         top: calc((100vw / var(--gridWidth)) * 47);
         left: calc((100vw / var(--gridWidth)) * 1);
