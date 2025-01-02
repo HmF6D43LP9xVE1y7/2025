@@ -275,7 +275,7 @@ a:hover, svg:hover {
 
 
 
-    .containerInfo, .containerImpressum {
+    .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .9) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navFontL, .contentFontL {
@@ -403,7 +403,7 @@ a:hover, svg:hover {
 
 
 
-    .containerInfo, .containerImpressum {
+    .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 16.5) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navFontL, .contentFontL {
@@ -509,7 +509,7 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .065)); /* desktop and ultrawide same value */
     }
-    .containerInfo, .containerImpressum {
+    .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((var(--viewWidth) / var(--gridWidth)) * 15.5) calc((var(--viewWidth) / var(--gridWidth)) * 2.2) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
 }
@@ -539,7 +539,7 @@ a:hover, svg:hover {
         margin-right: var(--margin);
         margin-left: var(--margin);
     }
-    .containerInfo, .containerImpressum {
+    .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .8) calc((calc(var(--viewWidth) / var(--gridWidth)) * 15.5) + var(--margin)) calc((var(--viewWidth) / var(--gridWidth)) * 2.5) calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
 }
@@ -706,41 +706,25 @@ a:hover, svg:hover {
     z-index: 2;
     text-indent: 0 !important;
 }
-.fader {
+.pageFader {
     position: fixed;
     height: 100vh;
     width: 100vw;
     z-index: 999999;
     pointer-events: none;
     background-color: white;
-    animation-duration: .5s;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    top: 0;
-    left: 0;
-    border-spacing: 0;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
-    -ms-animation-timing-function: ease-in-out;
-    -o-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
+
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
-@keyframes fade-out {
-    from { opacity: 1 }
-    to { opacity: 0 }
-}
-@keyframes fade-in {
-    from { opacity: 0 }
-    to { opacity: 1 }
-}
-.fader.fade-out {
+.pageFader.fade-out {
     opacity: 0;
-    animation-name: fade-out;
 }
-.fader.fade-in {
+.pageFader.fade-in {
     opacity: 1;
-    animation-name: fade-in;
 }
 
 /* DEBUG *//*
