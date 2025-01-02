@@ -278,12 +278,12 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .9) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    .navFontLarge, .contentFontLarge {
+    .navFontL, .contentFontL {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.35);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    .navFontSmall, .contentFontSmall {
+    .navFontS, .contentFontS {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .675);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * .75);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -406,12 +406,12 @@ a:hover, svg:hover {
     .containerInfo, .containerImpressum {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 16.5) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
-    .navFontLarge, .contentFontLarge {
+    .navFontL, .contentFontL {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
-    .navFontSmall, .contentFontSmall {
+    .navFontS, .contentFontS {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2);
@@ -471,12 +471,12 @@ a:hover, svg:hover {
                                                                                     }
 
 
-    .navFontLarge, .navFontSmall, .contentFontSmall {
+    .navFontL, .navFontS, .contentFontS {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * .5);
     }
-    .contentFontLarge {
+    .contentFontL {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * 1.8);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
         margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
