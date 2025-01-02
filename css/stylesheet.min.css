@@ -247,34 +247,27 @@ a:hover, svg:hover {
     .navCL, .navCR, .navBC, .toggle {
         display: none;
     }
-
-
-
-
-                                                                                .gridContainer:not(:nth-of-type(1)) {
-                                                                                    margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
-                                                                                }
-                                                                                .gridContainer:nth-of-type(1) {
-                                                                                    padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
-                                                                                }
-                                                                                .gridContainer:nth-of-type(4) {
-                                                                                    padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3.5);
-                                                                                }
-                                                                                .buechehof {
-                                                                                    grid-template-rows: repeat(211, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-                                                                                .wartenbergstrasse {
-                                                                                    grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-                                                                                .oubliettes {
-                                                                                    grid-template-rows: repeat(106, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-                                                                                .gartenweg {
-                                                                                    grid-template-rows: repeat(184, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-
-
-
+    .gridContainer:not(:nth-of-type(1)) {
+        margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
+    }
+    .gridContainer:nth-of-type(1) {
+        padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+    }
+    .gridContainer:nth-of-type(4) {
+        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3.5);
+    }
+    .buechehof {
+        grid-template-rows: repeat(211, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .wartenbergstrasse {
+        grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .oubliettes {
+        grid-template-rows: repeat(106, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .gartenweg {
+        grid-template-rows: repeat(184, calc(var(--viewWidth) / var(--gridWidth)));
+    }
     .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .9) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
@@ -314,22 +307,21 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * -.275));
     }
-
-                                                                                .gridContainer:not(:nth-of-type(1)) {
-                                                                                    margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
-                                                                                }
-                                                                                .buechehof {
-                                                                                    grid-template-rows: repeat(117, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-                                                                                .wartenbergstrasse {
-                                                                                    grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-                                                                                .oubliettes {
-                                                                                    grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
-                                                                                .gartenweg {
-                                                                                    grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
-                                                                                }
+    .gridContainer:not(:nth-of-type(1)) {
+        margin-top: calc((var(--viewWidth) / var(--gridWidth)) * 14);
+    }
+    .buechehof {
+        grid-template-rows: repeat(117, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .wartenbergstrasse {
+        grid-template-rows: repeat(58, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .oubliettes {
+        grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
+    }
+    .gartenweg {
+        grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+    }
 }
 
 /* - - - - - - - - - - - - - - - - - - - - TABLET - - - - - - - - - - - - - - - - - - - - */
@@ -382,13 +374,6 @@ a:hover, svg:hover {
         -o-transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
         transform: translateY(calc((var(--viewWidth) / var(--gridWidth)) * .35));
     }
-
-
-
-
-
-
-
     .parallaxContainer {
         margin-left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         margin-right: calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -399,10 +384,6 @@ a:hover, svg:hover {
     .gridContainer:nth-of-type(4) {
         padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
     }
-                                                                            
-
-
-
     .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 16.5) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
@@ -461,16 +442,12 @@ a:hover, svg:hover {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
-
-
-                                                                                    .gridContainer:nth-of-type(1) {
-                                                                                        padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
-                                                                                    }
-                                                                                    .gridContainer:nth-of-type(4) {
-                                                                                        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
-                                                                                    }
-
-
+    .gridContainer:nth-of-type(1) {
+        padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+    }
+    .gridContainer:nth-of-type(4) {
+        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+    }
     .navFontL, .navFontS, .contentFontS {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
