@@ -320,7 +320,7 @@ a:hover, svg:hover {
         grid-template-rows: repeat(56, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .gartenweg {
-        grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(115, calc(var(--viewWidth) / var(--gridWidth)));
     }
 }
 
@@ -550,78 +550,77 @@ a:hover, svg:hover {
 
 @media only screen and (min-width: 768px) and (max-width: 1159.9px) {
     .buechehofL {
-        top: calc((100vw / var(--gridWidth)) * 66.1);
-        left: calc((100vw / var(--gridWidth)) * 9);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 4));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 129.95);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 4.85);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 5.85));
     }
     .buechehofS {
-        top: calc((100vw / var(--gridWidth)) * 126);
-        left: calc((100vw / var(--gridWidth)) * 5);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 6));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 133.25);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .wartenbergstrasseS {
-        top: calc((100vw / var(--gridWidth)) * 221);
-        left: calc((100vw / var(--gridWidth)) * 2);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 3));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 232.3);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .oubliettesL {
-        top: calc((100vw / var(--gridWidth)) * 313);
-        left: calc((100vw / var(--gridWidth)) * 31);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 32));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 397.5);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 5);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 6));
     }
     .oubliettesS {
-        top: calc((100vw / var(--gridWidth)) * 316);
-        left: calc((100vw / var(--gridWidth)) * 17);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 18));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 400.75);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 18));
     }
     .gartenwegL {
-        top: calc((100vw / var(--gridWidth)) * 5);
-        left: calc((100vw / var(--gridWidth)) * 2);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 3));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 538.25);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 5);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 6));
     }
     .gartenwegS {
-        top: calc((100vw / var(--gridWidth)) * 8);
-        left: calc((100vw / var(--gridWidth)) * 4);
-        width: calc(100vw - ((100vw / var(--gridWidth)) * 5));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 541.55);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
-    
 }
 
 /* DESKTOP FONT POSITION                                                                                                                    DONEDONEDONEDONEDONE*/
 
 @media only screen and (min-width: 1160px) {
     .buechehofL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 67.6);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 10);
-        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 11));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 128.4);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 2.85);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 3.85));
     }
     .buechehofS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 128.2);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 131.65);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .wartenbergstrasseS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 229.9);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 230.7);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .oubliettesL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 329.1);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 19);
-        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 20));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 396);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 4));
     }
     .oubliettesS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 395.2);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 399.25);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 18));
     }
     .gartenwegL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 470.7);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 17);
-        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 18));
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 536.8);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 4));
     }
     .gartenwegS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 532);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 540.1);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
@@ -690,5 +689,3 @@ a:hover, svg:hover {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
-
-*/
