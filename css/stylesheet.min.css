@@ -86,7 +86,7 @@ a, svg {
     pointer-events: all;
 }
 a:hover, svg:hover {
-    opacity: .3 !important;
+    opacity: .3;
     cursor: pointer;
 }
 .navTR, .toggle {
@@ -95,12 +95,23 @@ a:hover, svg:hover {
 .navTR, .navBR {
     text-align: right;
 }
-.navTR, .navCL, .navCR, .navBL, .navBR {
+.lightboxCount {
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-indent: 0 !important;
+    text-align: center;
+}
+.navTR, .lightboxPrev, .lightboxNext, .navBL, .lightboxCount, .navBR, .lightboxClose {
     position: fixed;
     margin: 0 !important;
     z-index: 2;
 }
-.navCL, .navCR {
+.lightboxPrev, .lightboxNext {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -108,7 +119,7 @@ a:hover, svg:hover {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.navCL:active, .navCR:active {
+.lightboxPrev:active, .lightboxNext:active {
     -webkit-transform: translateX(0%) translateY(-50%) scale(0.9);
     -moz-transform: translateX(0%) translateY(-50%) scale(0.9);
     -ms-transform: translateX(0%) translateY(-50%) scale(0.9);
@@ -165,7 +176,7 @@ a:hover, svg:hover {
     position: absolute;
 }
 .lightbox {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1);
     position: fixed;
     display: none;
     left: 0;
@@ -185,8 +196,19 @@ a:hover, svg:hover {
     transform: translate(-50%, -50%);
     z-index: 4;
 }
-.lightboxCount {
-    text-align: center;
+.pageFader {
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    z-index: 99;
+}
+.pageFader.fade-out {
+    opacity: 0;
+}
+.pageFader.fade-in {
+    opacity: 1;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - MOBILE - - - - - - - - - - - - - - - - - - - - */
@@ -212,22 +234,26 @@ a:hover, svg:hover {
     #svgSocial {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 0);
     }
-    .navTR, .navCL, .navCR, .navBL, .navBR {
+    .navTR, .lightboxPrev, .lightboxNext, .navBL, .navBR {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 1.5);
     }
     .navTR {
         top: calc((var(--viewWidth) / var(--gridWidth)) * .75);
         right: calc((var(--viewWidth) / var(--gridWidth)) * .95);
     }
+    .lightboxClose {
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+    }
     .navBL {
-        bottom: calc((var(--viewWidth) / var(--gridWidth)) * .95);
+        bottom: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         left: calc((var(--viewWidth) / var(--gridWidth)) * .9);
     }
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * .8);
         right: calc((var(--viewWidth) / var(--gridWidth)) * .75);
     }
-    .navCL, .navCR, .navBC, .toggle {
+    .lightboxPrev, .lightboxNext, .lightboxCount, .toggle {
         display: none;
     }
     .gridContainer:not(:nth-of-type(1)) {
@@ -237,7 +263,7 @@ a:hover, svg:hover {
         padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
     .gridContainer:nth-of-type(4) {
-        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3.5);
+        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3.2);
     }
     .buechehof {
         grid-template-rows: repeat(211, calc(var(--viewWidth) / var(--gridWidth)));
@@ -319,25 +345,29 @@ a:hover, svg:hover {
     #svgSocial {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 0);
     }
-    .navTR, .navCL, .navCR, .navBL, .navBR {
+    .navTR, .lightboxPrev, .lightboxNext, .navBL, .navBR {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navTR {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 1.6);
         right: calc((var(--viewWidth) / var(--gridWidth)) * 2.05);
     }
-    .navCL {
+    .lightboxClose {
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+        right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
+    }
+    .lightboxPrev {
         left: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
-    .navCR {
+    .lightboxNext {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 2);
     }
     .navBL {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1.6);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1.85);
     }
-    .navBC {
-        height: calc((var(--viewWidth) / var(--gridWidth)) * 3.25) !important;
+    .lightboxCount {
+        height: calc((var(--viewWidth) / var(--gridWidth)) * 3.5);
     }
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1.65);
@@ -351,7 +381,7 @@ a:hover, svg:hover {
         padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 4);
     }
     .gridContainer:nth-of-type(4) {
-        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.5);
+        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 5.4);
     }
     .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * 1.8) calc((var(--viewWidth) / var(--gridWidth)) * 16.5) calc((var(--viewWidth) / var(--gridWidth)) * 5) calc((var(--viewWidth) / var(--gridWidth)) * 2);
@@ -387,28 +417,31 @@ a:hover, svg:hover {
     #svgSocial {
         right: calc((var(--viewWidth) / var(--gridWidth)) * 0);
     }
-    .navTR, .navCL, .navCR, .navBL, .navBR {
+    .navTR, .lightboxPrev, .lightboxNext, .navBL, .navBR {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 1);
     }
     .navTR {
         top: calc((var(--viewWidth) / var(--gridWidth)) * .8);
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
-    .navCL {
+    .lightboxClose {
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
+    }
+    .lightboxPrev {
         left: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
-    .navCR {
+    .lightboxNext {
         right: calc((calc(var(--viewWidth) / var(--gridWidth)) * 1) + var(--margin));
     }
     .navBL {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * .75);
         left: calc((calc(var(--viewWidth) / var(--gridWidth)) * .95) + var(--margin));
     }
-    .navBC {
+    .lightboxCount {
         height: calc((var(--viewWidth) / var(--gridWidth)) * 1.75) !important;
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .45) !important;
         line-height: calc((var(--viewWidth) / var(--gridWidth)) * .5) !important;
-        margin-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 1) !important;
     }
     .navBR {
         bottom: calc((var(--viewWidth) / var(--gridWidth)) * .8);
@@ -418,7 +451,7 @@ a:hover, svg:hover {
         padding-top: calc((var(--viewWidth) / var(--gridWidth)) * 3);
     }
     .gridContainer:nth-of-type(4) {
-        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3);
+        padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 2.7);
     }
     .navFontL, .navFontS, .contentFontS {
         font-size: calc((var(--viewWidth) / var(--gridWidth)) * .9);
@@ -463,7 +496,7 @@ a:hover, svg:hover {
     }
 }
 
-/* MOBILE FONT POSITION                                                                                             TODO */
+/* - - - - - - - - - - - - - - - - - - - - MOBILE FONT POSITION - - - - - - - - - - - - - - - - - - - - */ /* TODO */
 
 @media only screen and (max-width: 767.9px) {
     .buechehofL {
@@ -503,7 +536,7 @@ a:hover, svg:hover {
     }
 }
 
-/* TABLET FONT POSITION                                                                         TODO */
+/* - - - - - - - - - - - - - - - - - - - - TABLET FONT POSITION - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (min-width: 768px) and (max-width: 1159.9px) {
     .buechehofL {
@@ -543,7 +576,7 @@ a:hover, svg:hover {
     }
 }
 
-/* DESKTOP FONT POSITION                                                                                                                    DONEDONEDONEDONEDONE*/
+/* - - - - - - - - - - - - - - - - - - - - DESKTOP FONT POSITION - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (min-width: 1160px) {
     .buechehofL {
@@ -553,12 +586,12 @@ a:hover, svg:hover {
     }
     .buechehofS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 131.65);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * .95);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .wartenbergstrasseS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 230.7);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * .95);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .oubliettesL {
@@ -568,7 +601,7 @@ a:hover, svg:hover {
     }
     .oubliettesS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 399.25);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * .95);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 18));
     }
     .gartenwegL {
@@ -578,12 +611,12 @@ a:hover, svg:hover {
     }
     .gartenwegS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 540.1);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        left: calc((var(--viewWidth) / var(--gridWidth)) * .95);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
 }
 
-/* ULTRAWIDE FONT POSITION                                                                                                              DONE */
+/* - - - - - - - - - - - - - - - - - - - - ULTRAWIDE FONT POSITION - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (min-width: 1160px) and (min-aspect-ratio: 21/9) {
     .buechehofL, .buechehofS, .wartenbergstrasseS, .oubliettesL, .oubliettesS, .gartenwegL, .gartenwegS {
@@ -591,39 +624,8 @@ a:hover, svg:hover {
     }
 }
 
-.navBC {
-    left: 50% !important;
-    bottom: 0 !important;
-    -webkit-transform: translateX(-50%) !important;
-    -moz-transform: translateX(-50%) !important;
-    -ms-transform: translateX(-50%) !important;
-    -o-transform: translateX(-50%) !important;
-    transform: translateX(-50%) !important;
-    position: fixed;
-    margin: 0 !important;
-    z-index: 2;
-    text-indent: 0 !important;
-}
-.pageFader {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999999;
-    pointer-events: none;
-    background-color: white;
 
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -ms-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
-}
-.pageFader.fade-out {
-    opacity: 0;
-}
-.pageFader.fade-in {
-    opacity: 1;
-}
+
 
 /* DEBUG *//*
 
@@ -654,3 +656,6 @@ a:hover, svg:hover {
 * {
     outline: 1px dashed black !important;
 }
+
+
+
