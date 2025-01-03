@@ -523,38 +523,25 @@ a:hover, svg:hover {
 /* MOBILE FONT POSITION                                                                                             TODO */
 
 @media only screen and (max-width: 767.9px) {
-    .parallaxOubliettesA {
+    .oubliettesL {
         top: calc((100vw / var(--gridWidth)) * 47);
         left: calc((100vw / var(--gridWidth)) * 1);
     }
-    .parallaxOubliettesB {
+    .oubliettesS {
         top: calc((100vw / var(--gridWidth)) * 50);
         left: calc((100vw / var(--gridWidth)) * 1);
         right: calc((100vw / var(--gridWidth)) * 1);
     }
-    .parallaxOubliettesC {
-        top: calc((100vw / var(--gridWidth)) * 58.25);
-        left: calc((100vw / var(--gridWidth)) * 1);
-        right: calc((100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxWartenbergstrasseB {
+    .wartenbergstrasseS {
         top: calc((100vw / var(--gridWidth)) * 34);
         left: calc((100vw / var(--gridWidth)) * 1);
     }
-    .parallaxBuechehofA {
+    .buechehofL {
         top: calc((100vw / var(--gridWidth)) * 86);
         left: calc((100vw / var(--gridWidth)) * 1);
     }
-    .parallaxBuechehofB {
+    .buechehofS {
         top: calc((100vw / var(--gridWidth)) * 89);
-        left: calc((100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxHirzbodenwegA {
-        top: calc((100vw / var(--gridWidth)) * 96);
-        left: calc((100vw / var(--gridWidth)) * 1);
-    }
-    .parallaxHirzbodenwegB {
-        top: calc((100vw / var(--gridWidth)) * 99);
         left: calc((100vw / var(--gridWidth)) * 1);
     }
 }
@@ -562,37 +549,37 @@ a:hover, svg:hover {
 /* TABLET FONT POSITION                                                                         TODO */
 
 @media only screen and (min-width: 768px) and (max-width: 1159.9px) {
-    .parallaxBuechehofA {
+    .buechehofL {
         top: calc((100vw / var(--gridWidth)) * 66.1);
         left: calc((100vw / var(--gridWidth)) * 9);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 4));
     }
-    .parallaxBuechehofB {
+    .buechehofS {
         top: calc((100vw / var(--gridWidth)) * 126);
         left: calc((100vw / var(--gridWidth)) * 5);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 6));
     }
-    .parallaxWartenbergstrasseB {
+    .wartenbergstrasseS {
         top: calc((100vw / var(--gridWidth)) * 221);
         left: calc((100vw / var(--gridWidth)) * 2);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 3));
     }
-    .parallaxOubliettesA {
+    .oubliettesL {
         top: calc((100vw / var(--gridWidth)) * 313);
         left: calc((100vw / var(--gridWidth)) * 31);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 32));
     }
-    .parallaxOubliettesB {
+    .oubliettesS {
         top: calc((100vw / var(--gridWidth)) * 316);
         left: calc((100vw / var(--gridWidth)) * 17);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 18));
     }
-    .parallaxGartenwegA {
+    .gartenwegL {
         top: calc((100vw / var(--gridWidth)) * 5);
         left: calc((100vw / var(--gridWidth)) * 2);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 3));
     }
-    .parallaxGartenwegB {
+    .gartenwegS {
         top: calc((100vw / var(--gridWidth)) * 8);
         left: calc((100vw / var(--gridWidth)) * 4);
         width: calc(100vw - ((100vw / var(--gridWidth)) * 5));
@@ -603,37 +590,37 @@ a:hover, svg:hover {
 /* DESKTOP FONT POSITION                                                                                                                    DONEDONEDONEDONEDONE*/
 
 @media only screen and (min-width: 1160px) {
-    .parallaxBuechehofA {
+    .buechehofL {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 67.6);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 10);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 11));
     }
-    .parallaxBuechehofB {
+    .buechehofS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 128.2);
-        left: calc((var(--viewWidth) / var(--gridWidth)) * 3);
-        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 4));
+        left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
+        width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
-    .parallaxWartenbergstrasseB {
+    .wartenbergstrasseS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 229.9);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
-    .parallaxOubliettesA {
+    .oubliettesL {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 329.1);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 19);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 20));
     }
-    .parallaxOubliettesB {
+    .oubliettesS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 395.2);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 18));
     }
-    .parallaxGartenwegA {
+    .gartenwegL {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 470.7);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 17);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 18));
     }
-    .parallaxGartenwegB {
+    .gartenwegS {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 532);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
@@ -643,7 +630,7 @@ a:hover, svg:hover {
 /* ULTRAWIDE FONT POSITION                                                                                                              DONE */
 
 @media only screen and (min-width: 1160px) and (min-aspect-ratio: 21/9) {
-    .parallaxBuechehofA, .parallaxBuechehofB, .parallaxWartenbergstrasseB, .parallaxOubliettesA, .parallaxOubliettesB, .parallaxGartenwegA, .parallaxGartenwegB {
+    .buechehofL, .buechehofS, .wartenbergstrasseS, .oubliettesL, .oubliettesS, .gartenwegL, .gartenwegS {
         margin: 0 var(--margin) 0 var(--margin);
     }
 }
@@ -703,3 +690,5 @@ a:hover, svg:hover {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
+
+*/
