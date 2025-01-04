@@ -499,12 +499,12 @@ a:hover, svg:hover {
 
 @media only screen and (max-width: 767.9px) {
     .buechehofL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 103.35);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 104.5);
         left: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 1.9));
     }
     .buechehofS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 106.4);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 107.5);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
@@ -626,7 +626,7 @@ a:hover, svg:hover {
 
 
 
-/* DEBUG *//*
+/* DEBUG */
 
 * {
     background-color: rgba(255, 0, 0, .2);
