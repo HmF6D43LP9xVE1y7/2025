@@ -54,12 +54,10 @@
     font-family: "din-2014", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /*
-    hyphenate-character: ' -';
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    */
+    hyphenate-character: '-';
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
     color: rgba(0, 0, 0, 1);
 }
 body {
@@ -213,6 +211,12 @@ a:hover, svg:hover {
 /* - - - - - - - - - - - - - - - - - - - - MOBILE - - - - - - - - - - - - - - - - - - - - */
 
 @media only screen and (max-width: 767.9px) {
+    * {
+        hyphenate-character: '-';
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
     :root {
         --gridWidth: 16;
         --viewWidth: 100vw;
@@ -265,10 +269,10 @@ a:hover, svg:hover {
         padding-bottom: calc((var(--viewWidth) / var(--gridWidth)) * 3.2);
     }
     .buechehof {
-        grid-template-rows: repeat(211, calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(227, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .wartenbergstrasse {
-        grid-template-rows: repeat(108, calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(120, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .oubliettes {
         grid-template-rows: repeat(106, calc(var(--viewWidth) / var(--gridWidth)));
@@ -509,10 +513,11 @@ a:hover, svg:hover {
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .wartenbergstrasseS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 232.3);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 425.5);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
+    /*
     .oubliettesL {
         top: calc((var(--viewWidth) / var(--gridWidth)) * 397.5);
         left: calc((var(--viewWidth) / var(--gridWidth)) * .95);
@@ -533,6 +538,7 @@ a:hover, svg:hover {
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
+        */
 }
 
 /* - - - - - - - - - - - - - - - - - - - - TABLET FONT POSITION - - - - - - - - - - - - - - - - - - - - */
@@ -628,9 +634,6 @@ a:hover, svg:hover {
 
 /* DEBUG *//*
 
-* {
-    background-color: rgba(255, 0, 0, .2);
-}
 .debug-line {
     width: 100vw;
     height: 1px;
@@ -646,7 +649,10 @@ a:hover, svg:hover {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
-
+/*
+* {
+    background-color: rgba(255, 0, 0, .2);
+}
 .navBR {
     width: 50vw;
     background-color: rgba(0, 255, 100, .5);
