@@ -275,10 +275,10 @@ a:hover, svg:hover {
         grid-template-rows: repeat(120, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .oubliettes {
-        grid-template-rows: repeat(106, calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(130, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .gartenweg {
-        grid-template-rows: repeat(184, calc(var(--viewWidth) / var(--gridWidth)));
+        grid-template-rows: repeat(200, calc(var(--viewWidth) / var(--gridWidth)));
     }
     .contentContainer {
         margin: calc((var(--viewWidth) / var(--gridWidth)) * .9) calc((var(--viewWidth) / var(--gridWidth)) * 1) calc((var(--viewWidth) / var(--gridWidth)) * 3) calc((var(--viewWidth) / var(--gridWidth)) * 1);
@@ -517,28 +517,26 @@ a:hover, svg:hover {
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
-    /*
     .oubliettesL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 397.5);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 663.3);
         left: calc((var(--viewWidth) / var(--gridWidth)) * .95);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 1.95));
     }
     .oubliettesS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 400.75);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 666.3);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
     .gartenwegL {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 538.25);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 948.4);
         left: calc((var(--viewWidth) / var(--gridWidth)) * .9);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 1.9));
     }
     .gartenwegS {
-        top: calc((var(--viewWidth) / var(--gridWidth)) * 541.55);
+        top: calc((var(--viewWidth) / var(--gridWidth)) * 951.3);
         left: calc((var(--viewWidth) / var(--gridWidth)) * 1);
         width: calc(var(--viewWidth) - ((var(--viewWidth) / var(--gridWidth)) * 2));
     }
-        */
 }
 
 /* - - - - - - - - - - - - - - - - - - - - TABLET FONT POSITION - - - - - - - - - - - - - - - - - - - - */
@@ -632,7 +630,7 @@ a:hover, svg:hover {
 
 
 
-/* DEBUG *//*
+/* DEBUG */
 
 .debug-line {
     width: 100vw;
