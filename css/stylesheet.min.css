@@ -43,13 +43,9 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     font-size: 100%;
     text-align: left;
     text-transform: none;
@@ -76,6 +72,9 @@ body {
     -ms-text-decoration: underline;
     -o-text-decoration: underline;
     text-decoration: underline;
+}
+.translucent {
+    opacity: .25;
 }
 svg {
     position: absolute;
